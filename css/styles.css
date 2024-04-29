@@ -36,13 +36,13 @@ button {
     max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 
 .section {
-    padding: 120px 0;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 
@@ -54,21 +54,21 @@ button {
 .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
 }
 
 
 
 .header {
+    padding-top: 24px;
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-nav {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    flex-direction: row;
+    margin-right: auto;
 }
 
 .logo {
@@ -88,9 +88,6 @@ button {
 
 .header-list {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: row;
     gap: 40px;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -106,6 +103,7 @@ button {
     color: #2e2f42;
     padding: 24px 0;
     display: block;
+    position: relative;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -117,15 +115,12 @@ button {
     color: #404bbf;
 }
 
-.address {
+address {
     font-style: normal;
 }
 
 .header-contacts {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: row;
     gap: 40px;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -138,7 +133,8 @@ button {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #434455;  
+    color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current-page {
@@ -306,21 +302,20 @@ button {
     text-align: center;
     color: #2e2f42;
     text-transform: capitalize;
+    margin: 0 auto;
     margin-bottom: 72px;
 }
 
 .section-list {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
     gap: 24px;
 }
 
 .section-items {
     background-color: #fff;
     border-radius: 0 0 4px 4px;
-    width: calc((100% - 72px) / 4);
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .section-team-element {
@@ -343,6 +338,7 @@ button {
     text-align: center;
     letter-spacing: 0.02em;
     color: #434455;
+    margin-bottom: 8px;
 }
 
 .team-soclinks-block {
@@ -396,6 +392,7 @@ button {
     text-align: center;
     text-transform: capitalize;
     color: #2e2f42;
+    margin: 0 auto;
     margin-bottom: 72px;
 }
 
@@ -405,29 +402,24 @@ button {
 .portfolio-block {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: row;
-    column-gap: 24px;
+    gap: 24px;
     row-gap: 48px;
 }
 
 .portfolio-item {
-    width: calc((100% - 48px) / 3);
+    width: calc((100% - 2 * 24px) / 3);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-item:hover, .section-member-text {
+.portfolio-item:hover .portfolio-cover-text {
     transform: translateY(0);
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-}
+        0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    }
 
 .portfolio-wrap {
-    border-right: 1px solid #e7e9fc;
-    border-bottom: 1px solid #e7e9fc;
-    border-left: 1px solid #e7e9fc;
-    padding: 32px 16px;
+    position: relative;
+    overflow: hidden;
 }
 
 .portfolio-item-img {
@@ -438,7 +430,6 @@ button {
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    text-align: center;
     color: #2e2f42;
     margin-bottom: 8px;
 }
@@ -446,8 +437,6 @@ button {
 .portfolio-text {
     line-height: 1.5;
     letter-spacing: 0.02em;
-    text-align: center;
-    color: #434455;
 }
 
 .section-team-element {
@@ -493,6 +482,15 @@ button {
     padding-bottom: 100px;
 }
 
+.footeer-container {
+    display: flex;
+    align-items: baseline;
+}
+
+.footer-inform {
+    display: block;
+    margin-right: 120px;
+}
 .footer-logo {
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
@@ -528,6 +526,12 @@ button {
     margin-bottom: 16px;
 }
 .footer-soc-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin-bottom: 16px;
 }
 .footer-soc-list {
     display: flex;
